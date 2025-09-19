@@ -1,0 +1,18 @@
+{
+  "/example/en": [
+    {
+      "from": "https://example-domain.com/*",
+      "to": "https://example.com/:splat",
+      "status": 301,
+      "force": true
+    }
+  ],
+  "/example": [
+    {
+      "from": "https://example-domain.nl/*",
+      "to": "https://example.nl/:splat",
+      "status": 301,
+      "force": true
+    }
+  ]
+}

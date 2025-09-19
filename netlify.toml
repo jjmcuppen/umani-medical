@@ -1,0 +1,7 @@
+[dev]
+command = "yarn nuxt"
+port = 8888
+targetPort = 3000
+
+[build]
+functions = "functions"

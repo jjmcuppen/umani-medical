@@ -1,0 +1,28 @@
+FROM node:16.16.0-alpine
+WORKDIR /app
+RUN apk add git
+ADD ./package.json /app
+ADD ./yarn.lock /app
+ADD ./patches /app/patches
+RUN yarn install
+
+ADD . /app
+ARG BASE_URL
+ARG ASSET_URL
+ARG MULTISITE
+ARG ROOT
+ARG STORYBLOK_ACCESS_TOKEN
+ARG STORYBLOK_VERSION
+ARG GOOGLE_RECAPTCHA_KEY
+ARG GOOGLE_RECAPTCHA_SECRET
+ARG GOOGLE_ANALYTICS_ID
+ARG MAILER_DSN
+ARG MAILER_FROM
+ARG MAILER_FROM_NAME
+ARG MAILER_TO
+ARG MAILER_REPLY_TO
+ENV NODE_ENV=production
+RUN bin/netlify-environment.js
+RUN yarn generate --skip-routes
+
+CMD ["yarn", "deploy"]

@@ -1,0 +1,53 @@
+{
+  "link": {
+    "readMore": "Weiterlesen"
+  },
+  "form": {
+    "send": "Senden",
+    "recaptcha": "Diese Website ist durch reCAPTCHA geschützt und es gelten die <a href=\"https://policies.google.com/privacy?hl=de\" target=\"_blank\">Datenschutzbestimmungen</a> und <a href=\"https://policies.google.com/terms?hl=de\" target=\"_blank\">Nutzungsbedingungen</a> von Google.",
+    "default": {
+      "success": "Vielen Dank für das Ausfüllen des Formulars. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "error": "Ein unbekannter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "field": {
+      "checkbox": {
+        "rules": {
+          "single": "Diese Option ist obligatorisch",
+          "multiple": "Bitte wählen Sie mindestens eine Option aus"
+        }
+      },
+      "file": {
+        "rules": {
+          "single": "Wählen Sie eine Datei aus",
+          "multiple": "Wählen Sie mindestens eine Datei aus"
+        }
+      },
+      "radio": {
+        "rules": {
+          "empty": "Bitte wähle eine Option"
+        }
+      },
+      "select": {
+        "rules": {
+          "empty": "Bitte wähle eine Option"
+        }
+      },
+      "text": {
+        "rules": {
+          "empty": "Geben Sie einen :name ein",
+          "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+        }
+      },
+      "textarea": {
+        "rules": {
+          "empty": "Geben Sie einen :name ein"
+        }
+      }
+    }
+  },
+  "cookie": {
+    "text": "Diese Website verwendet Cookies, um die Nutzung der Website zu analysieren und die Benutzerfreundlichkeit zu verbessern.",
+    "moreInfo": "Mehr Informationen",
+    "agree": "Zustimmen"
+  }
+}

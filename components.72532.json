@@ -1,0 +1,3942 @@
+{
+  "components": [
+    {
+      "name": "content-banner-image",
+      "display_name": "Banner - Enkele afbeelding",
+      "created_at": "2020-01-03T08:12:26.574Z",
+      "updated_at": "2020-10-08T14:10:07.029Z",
+      "id": 687967,
+      "schema": {
+        "width": {
+          "type": "option",
+          "pos": 0,
+          "display_name": "Container breedte",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "full",
+              "name": "Volledige breedte"
+            },
+            {
+              "value": "inline",
+              "name": "Inline"
+            }
+          ],
+          "default_value": "full"
+        },
+        "background": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "Secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "size": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "display_name": "Afbeelding grootte",
+          "options": [
+            {
+              "value": "cover",
+              "name": "Beeldvullend"
+            },
+            {
+              "value": "contain",
+              "name": "Binnen het kader"
+            }
+          ],
+          "default_value": "cover"
+        },
+        "linkStyle": {
+          "type": "option",
+          "pos": 3,
+          "use_uuid": true,
+          "display_name": "Link stijl",
+          "description": "",
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary",
+          "exclude_empty_option": true
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 4,
+          "asset_link_type": true
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "pos": 5,
+          "default_value": "",
+          "description": "Vervangt 'Lees meer'"
+        },
+        "aspectRatio": {
+          "type": "option",
+          "pos": 6,
+          "display_name": "Afbeelding beeldverhouding",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "32:9",
+              "name": "32:9"
+            },
+            {
+              "value": "21:9",
+              "name": "21:9"
+            },
+            {
+              "value": "16:9",
+              "name": "16:9"
+            }
+          ],
+          "default_value": "21:9"
+        },
+        "image": {
+          "type": "asset",
+          "display_name": "Afbeelding",
+          "pos": 7,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "title": {
+          "type": "textarea",
+          "display_name": "Titel",
+          "pos": 8
+        },
+        "text": {
+          "type": "textarea",
+          "pos": 9,
+          "display_name": "Tekst"
+        },
+        "tab-c63e1df8-6c0c-4148-9b0a-cd51f5ad0b1f": {
+          "type": "tab",
+          "display_name": "Afbeelding",
+          "keys": [
+            "image",
+            "aspectRatio",
+            "size"
+          ],
+          "pos": 10
+        },
+        "tab-c259c91f-69bf-436e-b576-cb3aaa251239": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "title"
+          ],
+          "pos": 11
+        },
+        "tab-75bcae2f-1a15-41a0-afc5-d4bd0e4c001f": {
+          "type": "tab",
+          "display_name": "Tekst",
+          "keys": [
+            "text"
+          ],
+          "pos": 12
+        },
+        "tab-9d091805-1337-4f8d-aa87-1708737475d0": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "linkText",
+            "link",
+            "linkStyle",
+            "linkType"
+          ],
+          "pos": 13
+        },
+        "tab-f2da3004-189c-4671-a566-4f8e0d21c518": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "width",
+            "background"
+          ],
+          "pos": 14
+        }
+      },
+      "image": null,
+      "preview_field": "title",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Banner - Enkele afbeelding",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-banner-images",
+      "display_name": "Banner - Meerdere afbeeldingen",
+      "created_at": "2020-01-03T08:12:26.273Z",
+      "updated_at": "2020-10-08T14:04:13.388Z",
+      "id": 687965,
+      "schema": {
+        "width": {
+          "type": "option",
+          "pos": 0,
+          "use_uuid": true,
+          "display_name": "Container breedte",
+          "options": [
+            {
+              "value": "full",
+              "name": "Volledige breedte"
+            },
+            {
+              "value": "inline",
+              "name": "Inline"
+            }
+          ],
+          "default_value": "full",
+          "description": ""
+        },
+        "background": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "aspectRatio": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "description": "",
+          "display_name": "Beeldverhouding",
+          "default_value": "21:9",
+          "options": [
+            {
+              "value": "32:9",
+              "name": "32:9"
+            },
+            {
+              "value": "21:9",
+              "name": "21:9"
+            },
+            {
+              "value": "16:9",
+              "name": "16:9"
+            }
+          ]
+        },
+        "autoplay": {
+          "type": "boolean",
+          "pos": 3,
+          "display_name": "Automatisch afspelen"
+        },
+        "loop": {
+          "type": "boolean",
+          "pos": 4,
+          "display_name": "Herhaald afspelen"
+        },
+        "effect": {
+          "type": "option",
+          "use_uuid": true,
+          "display_name": "Overgang animatie",
+          "options": [
+            {
+              "value": "slide",
+              "name": "Schuiven"
+            },
+            {
+              "value": "fade",
+              "name": "Vervagen"
+            }
+          ],
+          "pos": 5
+        },
+        "blocks": {
+          "type": "bloks",
+          "maximum": "",
+          "required": true,
+          "description": "",
+          "display_name": "Afbeeldingen",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-banner-images"
+          ],
+          "pos": 6
+        },
+        "tab-81016ab9-dd05-4e45-868c-046847e60326": {
+          "type": "tab",
+          "display_name": "Blokken",
+          "keys": [
+            "blocks",
+            "effect",
+            "autoplay",
+            "loop"
+          ],
+          "pos": 7
+        },
+        "tab-50c968da-cae2-433e-897a-06bc461cb00b": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "aspectRatio",
+            "width",
+            "background"
+          ],
+          "pos": 8
+        }
+      },
+      "image": null,
+      "preview_field": "items",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Banner - Meerdere afbeeldingen",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-blocks",
+      "display_name": "Content blokken",
+      "created_at": "2020-01-03T08:12:28.037Z",
+      "updated_at": "2020-09-15T13:27:31.236Z",
+      "id": 687977,
+      "schema": {
+        "linkStyle": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "display_name": "Link stijl",
+          "default_value": "primary",
+          "exclude_empty_option": true,
+          "pos": 0
+        },
+        "link": {
+          "type": "multilink",
+          "display_name": "Link",
+          "show_anchor": false,
+          "asset_link_type": true,
+          "pos": 1
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "description": "Vervangt 'Lees meer'",
+          "pos": 2
+        },
+        "tab-ce509c41-907b-476b-882a-fc51e2b75a4f": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 3
+        },
+        "tab-66afb42b-422c-4664-a7da-6c0230b4c8ed": {
+          "type": "tab",
+          "display_name": "Blokken",
+          "keys": [
+            "blocks",
+            "textCenter",
+            "perRow"
+          ],
+          "pos": 4
+        },
+        "tab-8f9b22fe-0b54-4c25-a12c-3db2dd2b8f4b": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "linkText",
+            "link",
+            "linkStyle",
+            "linkType"
+          ],
+          "pos": 5
+        },
+        "tab-b234c3f3-bf23-40da-b095-6d56b6a72e55": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background"
+          ],
+          "pos": 6
+        },
+        "background": {
+          "type": "option",
+          "pos": 7,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "display_name": "Achtergrond kleur",
+          "default_value": "none",
+          "exclude_empty_option": true
+        },
+        "perRow": {
+          "type": "option",
+          "use_uuid": true,
+          "description": "",
+          "display_name": "Aantal per rij",
+          "default_value": "2",
+          "required": true,
+          "options": [
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            }
+          ],
+          "pos": 8,
+          "exclude_empty_option": true
+        },
+        "textCenter": {
+          "type": "boolean",
+          "display_name": "Tekst centreren",
+          "pos": 9
+        },
+        "blocks": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-block"
+          ],
+          "display_name": "Blokken",
+          "pos": 10
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 11,
+          "display_name": "Titel kleur",
+          "default_value": "primary",
+          "translatable": false,
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ]
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 12,
+          "display_name": "Titel stijl",
+          "default_value": "h2",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ]
+        },
+        "title": {
+          "type": "text",
+          "display_name": "Titel",
+          "pos": 13
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 14,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 15,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Content blokken",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-columns",
+      "display_name": "Kolommen",
+      "created_at": "2020-01-13T15:22:04.139Z",
+      "updated_at": "2020-09-04T09:01:35.293Z",
+      "id": 700328,
+      "schema": {
+        "align": {
+          "type": "option",
+          "display_name": "Uitlijning",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "start",
+              "name": "Boven"
+            },
+            {
+              "value": "center",
+              "name": "Midden"
+            },
+            {
+              "value": "end",
+              "name": "Beneden"
+            }
+          ],
+          "pos": 0,
+          "default_value": "center"
+        },
+        "cols": {
+          "type": "option",
+          "max_length": "",
+          "default_value": "6;6",
+          "use_uuid": true,
+          "description": "",
+          "display_name": "Kolom verdeling",
+          "options": [
+            {
+              "value": "6;6",
+              "name": "1/2 - 1/2"
+            },
+            {
+              "value": "4;8",
+              "name": "1/3 - 2/3"
+            },
+            {
+              "value": "8;4",
+              "name": "2/3 - 1/3"
+            },
+            {
+              "value": "3;9",
+              "name": "1/4 - 3/4"
+            },
+            {
+              "value": "9;3",
+              "name": "3/4 - 1/4"
+            }
+          ],
+          "pos": 1
+        },
+        "blocks": {
+          "type": "bloks",
+          "display_name": "Klommen",
+          "maximum": "2",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-column-image",
+            "item-column-text",
+            "item-column-video",
+            "item-column-iframe"
+          ],
+          "pos": 2
+        },
+        "background": {
+          "type": "option",
+          "pos": 3,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "width": {
+          "type": "option",
+          "pos": 4,
+          "use_uuid": true,
+          "display_name": "Container breedte",
+          "options": [
+            {
+              "value": "full",
+              "name": "Volledige breedte"
+            },
+            {
+              "value": "inline",
+              "name": "Inline"
+            }
+          ],
+          "description": "",
+          "default_value": "full"
+        },
+        "tab-777141fe-8e3d-4508-8737-659b47ef51f2": {
+          "type": "tab",
+          "display_name": "Kolommen",
+          "keys": [
+            "blocks",
+            "cols",
+            "align"
+          ],
+          "pos": 5
+        },
+        "tab-24d3accd-24bc-4876-92fb-8c746cd8e698": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background",
+            "width"
+          ],
+          "pos": 6
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Kolommen",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-form",
+      "display_name": "Formulier",
+      "created_at": "2020-09-01T07:47:28.202Z",
+      "updated_at": "2020-12-11T12:08:25.851Z",
+      "id": 1078616,
+      "schema": {
+        "confirmationSend": {
+          "type": "boolean",
+          "pos": 0,
+          "display_name": "Stuur gebruiker bevestiging"
+        },
+        "confirmationSubject": {
+          "type": "text",
+          "pos": 1,
+          "display_name": "Onderwerp"
+        },
+        "confirmationText": {
+          "type": "textarea",
+          "pos": 2,
+          "display_name": "Tekst"
+        },
+        "submitMailTo": {
+          "type": "text",
+          "pos": 3,
+          "display_name": "Resultaat mailen naar",
+          "description": "Meerdere e-mail adressen scheiden door een komma",
+          "default_value": "",
+          "required": true
+        },
+        "submitSubject": {
+          "type": "text",
+          "pos": 4,
+          "display_name": "Resultaat mail onderwerp",
+          "required": true
+        },
+        "submitLink": {
+          "type": "multilink",
+          "display_name": "Bedankpagina na verzending",
+          "pos": 5,
+          "restrict_content_types": true,
+          "component_whitelist": [
+            "page-content"
+          ],
+          "description": "Stuur de gebruiker naar een bedanktpagina. Optie 'Bericht na verzending' vervalt hierdoor."
+        },
+        "submitMessage": {
+          "type": "textarea",
+          "display_name": "Bericht na verzending",
+          "description": "Vervangt: \"Bedankt voor het invullen van het formulier. Wij nemen zo spoedig mogelijk contact met je op.\"",
+          "pos": 6
+        },
+        "tab-d3e34ba2-13cf-454d-979d-ba8bf04084ea": {
+          "type": "tab",
+          "display_name": "Velden",
+          "keys": [
+            "fields"
+          ],
+          "pos": 7
+        },
+        "tab-f39f8311-664a-4f2e-a0ee-3b0c5220186d": {
+          "type": "tab",
+          "display_name": "Verzenden",
+          "keys": [
+            "submitSubject",
+            "submitMailTo",
+            "submitMessage",
+            "submitLink"
+          ],
+          "pos": 8
+        },
+        "tab-646968d4-04f2-46b1-ba2c-dee221e90a6a": {
+          "type": "tab",
+          "display_name": "Bevestiging",
+          "keys": [
+            "confirmationSend",
+            "confirmationSubject",
+            "confirmationText"
+          ],
+          "pos": 9
+        },
+        "tab-61ee27c5-d01e-4092-9e15-8d577f68a9da": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background"
+          ],
+          "pos": 10
+        },
+        "background": {
+          "type": "option",
+          "display_name": "Achtergrond kleur",
+          "default_value": "none",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "pos": 11
+        },
+        "fields": {
+          "type": "bloks",
+          "pos": 12,
+          "display_name": "Velden",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "form-field-text",
+            "form-field-textarea",
+            "form-field-radio",
+            "form-field-checkbox",
+            "form-field-select",
+            "form-field-file"
+          ],
+          "default_value": "",
+          "description": "LET OP! Gebruik voor velden unieke namen."
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Formulier",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-gallery-masonry",
+      "display_name": "Galerij",
+      "created_at": "2020-01-03T08:12:27.149Z",
+      "updated_at": "2020-08-27T15:35:42.362Z",
+      "id": 687971,
+      "schema": {
+        "blocks": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-gallery-masonry"
+          ],
+          "restrict_type": "",
+          "pos": 0,
+          "display_name": "Afbeeldingen"
+        },
+        "background": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "exclude_empty_option": true,
+          "default_value": "none"
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 2,
+          "display_name": "Titel kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 3,
+          "display_name": "Titel stijl",
+          "default_value": "h2",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "exclude_empty_option": true
+        },
+        "title": {
+          "type": "text",
+          "pos": 4
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 5,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 6,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "tab-238e29dd-9855-46d9-9db6-523b66c5acb2": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 7
+        },
+        "tab-177724b8-9e3c-4965-8ec6-a3339af1ea60": {
+          "type": "tab",
+          "display_name": "Afbeeldingen",
+          "keys": [
+            "blocks"
+          ],
+          "pos": 8
+        },
+        "tab-b75243e1-955b-4547-b43a-f7e7628f18f2": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background"
+          ],
+          "pos": 9
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Galerij",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-iframe",
+      "display_name": "Iframe",
+      "created_at": "2020-03-24T22:47:17.505Z",
+      "updated_at": "2020-08-27T15:37:23.400Z",
+      "id": 830066,
+      "schema": {
+        "background": {
+          "type": "option",
+          "pos": 0,
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "display_name": "Achtergrond kleur",
+          "default_value": "none"
+        },
+        "width": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Breedte",
+          "default_value": "full",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "full",
+              "name": "Volledige breedte"
+            },
+            {
+              "value": "inline",
+              "name": "Inline"
+            }
+          ]
+        },
+        "aspectRatio": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "display_name": "Beeldverhouding",
+          "options": [
+            {
+              "value": "1:1",
+              "name": "Vierkant (1:1)"
+            },
+            {
+              "value": "2:1",
+              "name": "Liggend (2:1)"
+            },
+            {
+              "value": "1:2",
+              "name": "Staand (1:2)"
+            },
+            {
+              "value": "3:2",
+              "name": "Liggend (3:2)"
+            },
+            {
+              "value": "2:3",
+              "name": "Staand (2:3)"
+            },
+            {
+              "value": "4:3",
+              "name": "Liggend (4:3)"
+            },
+            {
+              "value": "3:4",
+              "name": "Staand (3:4)"
+            },
+            {
+              "value": "5:4",
+              "name": "Liggend (5:4)"
+            },
+            {
+              "value": "4:5",
+              "name": "Staand (4:5)"
+            },
+            {
+              "value": "16:9",
+              "name": "Liggend (16:9)"
+            },
+            {
+              "value": "9:16",
+              "name": "Staand (9:16)"
+            },
+            {
+              "value": "21:9",
+              "name": "Liggend (21:9)"
+            },
+            {
+              "value": "9:21",
+              "name": "Staand (9:21)"
+            }
+          ],
+          "default_value": "1:1"
+        },
+        "src": {
+          "type": "text",
+          "pos": 3,
+          "display_name": "Url",
+          "description": ""
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 4,
+          "display_name": "Titel kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 5,
+          "display_name": "Titel stijl",
+          "default_value": "h2",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ]
+        },
+        "title": {
+          "type": "text",
+          "pos": 6,
+          "display_name": "Titel"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 7,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 8,
+          "display_name": "Lijn zichtbaar"
+        },
+        "tab-d9e21bf8-0be6-4bd7-8828-5bdf7f907d61": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderVisible",
+            "borderColor",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 9
+        },
+        "tab-b74fe057-4eb1-4dec-b845-4ea42edd6305": {
+          "type": "tab",
+          "display_name": "Iframe",
+          "keys": [
+            "src",
+            "aspectRatio"
+          ],
+          "pos": 10
+        },
+        "tab-9900f2ad-efb2-4c33-a895-51984f725b43": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "width",
+            "background"
+          ],
+          "pos": 11
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Iframe",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-image",
+      "display_name": "Afbeelding",
+      "created_at": "2020-03-19T21:50:04.711Z",
+      "updated_at": "2020-08-27T15:38:21.874Z",
+      "id": 821378,
+      "schema": {
+        "background": {
+          "type": "option",
+          "pos": 0,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "sizing": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "small",
+              "name": "Klein"
+            },
+            {
+              "value": "medium",
+              "name": "Middel"
+            },
+            {
+              "value": "Large",
+              "name": "Groot"
+            }
+          ],
+          "display_name": "Grootte",
+          "pos": 1,
+          "default_value": "medium"
+        },
+        "alignment": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "display_name": "Uitlijning",
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "center",
+              "name": "Midden"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            }
+          ],
+          "default_value": "left"
+        },
+        "image": {
+          "type": "asset",
+          "display_name": "Afbeelding",
+          "pos": 3,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "description": {
+          "type": "text",
+          "display_name": "Beschrijving",
+          "pos": 4
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 5,
+          "display_name": "Titel kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 6,
+          "display_name": "Titel stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "default_value": "h2"
+        },
+        "title": {
+          "type": "text",
+          "pos": 7,
+          "display_name": "Titel"
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 8,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 9,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ]
+        },
+        "tab-428d57e9-568e-4907-8acf-ba0b5e9e44c1": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 10
+        },
+        "tab-3f08a42b-c8f5-41e0-9cdb-721dc7e6ba97": {
+          "type": "tab",
+          "display_name": "Afbeelding",
+          "keys": [
+            "description",
+            "image"
+          ],
+          "pos": 11
+        },
+        "tab-335eae30-5c26-42f1-8168-48bd9832dca1": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "alignment",
+            "sizing",
+            "background"
+          ],
+          "pos": 12
+        }
+      },
+      "image": null,
+      "preview_field": "title",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Afbeelding",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-overview",
+      "display_name": "Overzicht",
+      "created_at": "2020-03-20T15:23:38.487Z",
+      "updated_at": "2020-12-11T10:34:59.494Z",
+      "id": 823011,
+      "schema": {
+        "linkStyle": {
+          "type": "option",
+          "display_name": "Link stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary",
+          "pos": 0
+        },
+        "link": {
+          "type": "multilink",
+          "display_name": "Link",
+          "show_anchor": false,
+          "asset_link_type": true,
+          "pos": 1
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "description": "Vervangt 'Lees meer'",
+          "pos": 2
+        },
+        "sortBy": {
+          "type": "option",
+          "use_uuid": true,
+          "display_name": "Sortering",
+          "description": "",
+          "options": [
+            {
+              "value": "position:asc",
+              "name": "Positie"
+            },
+            {
+              "value": "content.overviewDate:asc",
+              "name": "Datum oplopend"
+            },
+            {
+              "value": "content.overviewDate:desc",
+              "name": "Datum aflopend"
+            }
+          ],
+          "default_value": "position:asc",
+          "pos": 3
+        },
+        "story": {
+          "type": "multilink",
+          "display_name": "Pagina",
+          "description": "Toon onderliggende pagina's van geselecteerde pagina.",
+          "restrict_content_types": false,
+          "component_whitelist": [
+            "page-content"
+          ],
+          "pos": 4,
+          "required": true
+        },
+        "perPage": {
+          "type": "option",
+          "display_name": "Items per pagina",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "default_value": "6",
+          "pos": 5,
+          "regex": "",
+          "description": ""
+        },
+        "hidePagination": {
+          "type": "boolean",
+          "display_name": "Paginering verbergen",
+          "pos": 6
+        },
+        "background": {
+          "type": "option",
+          "pos": 7,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 8,
+          "display_name": "Titel kleur",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "exclude_empty_option": true,
+          "default_value": "primary"
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 9,
+          "display_name": "Titel stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "default_value": "h2"
+        },
+        "title": {
+          "type": "text",
+          "pos": 10,
+          "display_name": "Titel"
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 11,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 12,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "tab-84440b77-a74e-46a4-8bde-74430c0d28b3": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 13
+        },
+        "tab-7c2d876d-e912-4e10-b5ac-bc496fca808f": {
+          "type": "tab",
+          "display_name": "Blokken",
+          "keys": [
+            "hidePagination",
+            "sortBy",
+            "perPage",
+            "story"
+          ],
+          "pos": 14
+        },
+        "tab-7ced5428-f9bb-4d53-8c0c-91ea4f3cb952": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "linkText",
+            "link",
+            "linkStyle",
+            "linkType"
+          ],
+          "pos": 15
+        },
+        "tab-ca4a55e9-1cc6-48e6-af96-dd4572451126": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background"
+          ],
+          "pos": 16
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Overzicht",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-text",
+      "display_name": "Tekst",
+      "created_at": "2020-01-03T08:12:26.712Z",
+      "updated_at": "2020-12-11T13:11:31.723Z",
+      "id": 687968,
+      "schema": {
+        "textColor": {
+          "type": "option",
+          "pos": 0,
+          "display_name": "Tekst kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "default",
+              "name": "Standaard"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            }
+          ],
+          "default_value": "default"
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Titel kleur",
+          "default_value": "primary",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ]
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 2,
+          "display_name": "Titel stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "default_value": "h1"
+        },
+        "title": {
+          "type": "textarea",
+          "pos": 3,
+          "display_name": "Titel"
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 4,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 5,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "tab-b5942b25-0420-4c61-a5af-7359a1edc820": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "title",
+            "titleColor",
+            "titleTag",
+            "borderVisible",
+            "borderColor"
+          ],
+          "pos": 6
+        },
+        "tab-600e05c3-d3bc-4eac-82bd-fe50909af4c2": {
+          "type": "tab",
+          "display_name": "Tekst",
+          "keys": [
+            "text",
+            "textColor"
+          ],
+          "pos": 7
+        },
+        "tab-d580eb7f-dbf8-4fff-b105-b0a5c2bbbc69": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "linkStyle",
+            "link",
+            "linkText"
+          ],
+          "pos": 8
+        },
+        "tab-9cd2362a-4af5-4772-8b14-84a3b95371df": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "background",
+            "alignment",
+            "textAlignment"
+          ],
+          "pos": 9
+        },
+        "background": {
+          "type": "option",
+          "pos": 10,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "exclude_empty_option": true,
+          "default_value": "none"
+        },
+        "alignment": {
+          "type": "option",
+          "pos": 11,
+          "display_name": "Uitlijning",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "center",
+              "name": "Gecentreerd"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            }
+          ],
+          "default_value": "center"
+        },
+        "textAlignment": {
+          "type": "option",
+          "pos": 12,
+          "display_name": "Tekst uitlijning",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "center",
+              "name": "Midden"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            }
+          ],
+          "default_value": "left"
+        },
+        "text": {
+          "type": "richtext",
+          "display_name": "Tekst",
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "strike",
+            "underline",
+            "paragraph",
+            "h2",
+            "h3",
+            "h5",
+            "h4",
+            "h6",
+            "list",
+            "olist",
+            "quote",
+            "link",
+            "paste",
+            "undo",
+            "redo",
+            "mode",
+            "image"
+          ],
+          "pos": 13
+        },
+        "linkStyle": {
+          "type": "option",
+          "pos": 14,
+          "display_name": "Link stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "link": {
+          "type": "multilink",
+          "email_link_type": false,
+          "asset_link_type": true,
+          "link_scope": "",
+          "description": "",
+          "display_name": "Link",
+          "pos": 15,
+          "show_anchor": false
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "description": "Vervangt 'Lees meer'",
+          "pos": 16
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Tekst",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "content-video",
+      "display_name": "Video",
+      "created_at": "2020-03-19T22:34:15.074Z",
+      "updated_at": "2020-10-08T14:35:30.547Z",
+      "id": 821382,
+      "schema": {
+        "image": {
+          "type": "asset",
+          "pos": 0,
+          "display_name": "Afbeelding",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Afbeelding die over de video heen gelegd wordt incl. play knop. Als de optie 'Automatisch afspelen' aangevikt is wordt deze niet getoond."
+        },
+        "video": {
+          "type": "asset",
+          "display_name": "Video",
+          "pos": 1,
+          "filetypes": [
+            "videos"
+          ]
+        },
+        "url": {
+          "type": "text",
+          "pos": 2,
+          "display_name": "Youtube of Vimeo url"
+        },
+        "controls": {
+          "type": "boolean",
+          "pos": 3,
+          "display_name": "Bediening"
+        },
+        "autoplay": {
+          "type": "boolean",
+          "pos": 4,
+          "display_name": "Automatisch afspelen"
+        },
+        "loop": {
+          "type": "boolean",
+          "pos": 5,
+          "display_name": "Herhaald afspelen"
+        },
+        "muted": {
+          "type": "boolean",
+          "pos": 6,
+          "display_name": "Geluid dempen"
+        },
+        "description": {
+          "type": "text",
+          "display_name": "Beschrijving",
+          "pos": 7
+        },
+        "background": {
+          "type": "option",
+          "pos": 8,
+          "display_name": "Achtergrond kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "none",
+              "name": "Geen"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "none"
+        },
+        "sizing": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "small",
+              "name": "Klein"
+            },
+            {
+              "value": "medium",
+              "name": "Middel"
+            },
+            {
+              "value": "Large",
+              "name": "Groot"
+            }
+          ],
+          "display_name": "Grootte",
+          "pos": 9,
+          "default_value": "medium"
+        },
+        "alignment": {
+          "type": "option",
+          "pos": 10,
+          "use_uuid": true,
+          "display_name": "Uitlijning",
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "center",
+              "name": "Midden"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            }
+          ],
+          "default_value": "left"
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 11,
+          "display_name": "Titel kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 12,
+          "display_name": "Titel stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "default_value": "h2"
+        },
+        "title": {
+          "type": "text",
+          "pos": 13,
+          "display_name": "Titel"
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 14,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 15,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "exclude_empty_option": true,
+          "default_value": "primary"
+        },
+        "tab-7a53c30b-5a1e-4f0e-8827-e454406a3c2a": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleTag",
+            "titleColor"
+          ],
+          "pos": 16
+        },
+        "tab-28ec415d-275b-4734-aaec-ea661bc3aacb": {
+          "type": "tab",
+          "display_name": "Video",
+          "keys": [
+            "description",
+            "muted",
+            "loop",
+            "autoplay",
+            "controls",
+            "vimeo",
+            "youtube",
+            "video",
+            "url",
+            "image"
+          ],
+          "pos": 17
+        },
+        "tab-ad6a0775-a241-4e1b-8b99-57b4e8286c22": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "alignment",
+            "sizing",
+            "background"
+          ],
+          "pos": 18
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Video",
+      "component_group_uuid": "b26a2a1d-871f-44e4-9796-8ad8a8850cc0",
+      "component_group_name": "Content"
+    },
+    {
+      "name": "form-field-checkbox",
+      "display_name": "Meerkeuze met met meerdere mogelijke antwoorden",
+      "created_at": "2020-09-01T07:47:28.345Z",
+      "updated_at": "2020-09-01T07:47:28.345Z",
+      "id": 1078617,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 1,
+          "display_name": "Verplicht"
+        },
+        "options": {
+          "type": "bloks",
+          "display_name": "Opties",
+          "restrict_components": true,
+          "component_whitelist": [
+            "form-field-checkbox-option"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Meerkeuze met met meerdere mogelijke antwoorden",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-checkbox-option",
+      "display_name": "Optie",
+      "created_at": "2020-09-01T07:47:28.541Z",
+      "updated_at": "2020-09-01T07:47:28.541Z",
+      "id": 1078618,
+      "schema": {
+        "name": {
+          "type": "text",
+          "display_name": "Naam",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Optie",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-file",
+      "display_name": "Bestand",
+      "created_at": "2020-09-01T07:47:28.737Z",
+      "updated_at": "2020-09-01T07:47:28.737Z",
+      "id": 1078619,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "multiple": {
+          "type": "boolean",
+          "pos": 1,
+          "display_name": "Meerdere bestanden"
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 2,
+          "display_name": "Verplicht"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Bestand",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-radio",
+      "display_name": "Meerkeuze met met één mogelijk antwoord - Radio buttons",
+      "created_at": "2020-09-01T07:47:28.937Z",
+      "updated_at": "2020-09-01T07:47:28.937Z",
+      "id": 1078620,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 1,
+          "display_name": "Verplicht"
+        },
+        "options": {
+          "type": "bloks",
+          "display_name": "Opties",
+          "restrict_components": true,
+          "component_whitelist": [
+            "form-field-radio-option"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Meerkeuze met met één mogelijk antwoord - Radio buttons",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-radio-option",
+      "display_name": "Optie",
+      "created_at": "2020-09-01T07:47:29.144Z",
+      "updated_at": "2020-09-01T07:47:29.144Z",
+      "id": 1078621,
+      "schema": {
+        "name": {
+          "type": "text",
+          "display_name": "Naam",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Optie",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-select",
+      "display_name": "Meerkeuze met met één mogelijk antwoord - Dropdown",
+      "created_at": "2020-09-01T07:47:29.345Z",
+      "updated_at": "2020-09-01T07:47:29.345Z",
+      "id": 1078622,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 1,
+          "display_name": "Verplicht"
+        },
+        "options": {
+          "type": "bloks",
+          "display_name": "Opties",
+          "restrict_components": true,
+          "component_whitelist": [
+            "form-field-radio-option"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Meerkeuze met met één mogelijk antwoord - Dropdown",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-select-option",
+      "display_name": "Optie",
+      "created_at": "2020-09-01T07:47:29.563Z",
+      "updated_at": "2020-09-01T07:47:29.563Z",
+      "id": 1078623,
+      "schema": {
+        "name": {
+          "type": "text",
+          "display_name": "Naam",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Optie",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-text",
+      "display_name": " Tekst met één regel",
+      "created_at": "2020-09-01T07:47:29.757Z",
+      "updated_at": "2020-09-01T07:47:29.757Z",
+      "id": 1078624,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "type": {
+          "type": "option",
+          "pos": 1,
+          "use_uuid": true,
+          "display_name": "Type",
+          "options": [
+            {
+              "value": "text",
+              "name": "Tekst"
+            },
+            {
+              "value": "email",
+              "name": "E-mail"
+            }
+          ],
+          "default_value": "text"
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 2,
+          "display_name": "Verplicht"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": " Tekst met één regel",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "form-field-textarea",
+      "display_name": " Tekst met meerdere regels",
+      "created_at": "2020-09-01T07:47:29.955Z",
+      "updated_at": "2020-09-01T07:47:29.955Z",
+      "id": 1078625,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Naam",
+          "required": true
+        },
+        "required": {
+          "type": "boolean",
+          "pos": 1,
+          "display_name": "Verplicht"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": " Tekst met meerdere regels",
+      "component_group_uuid": "f703a422-3d38-42b9-931e-bd79ec814cf4",
+      "component_group_name": "Form"
+    },
+    {
+      "name": "group-nav-footer",
+      "display_name": "Groep",
+      "created_at": "2020-03-25T23:11:10.499Z",
+      "updated_at": "2020-03-25T23:16:43.938Z",
+      "id": 832181,
+      "schema": {
+        "name": {
+          "type": "text",
+          "display_name": "Naam"
+        },
+        "link": {
+          "type": "multilink",
+          "display_name": "Link",
+          "email_link_type": true,
+          "asset_link_type": true,
+          "description": ""
+        },
+        "items": {
+          "type": "bloks",
+          "display_name": "Items",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-nav-footer"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Groep",
+      "component_group_uuid": "936d5ef1-dfad-49b0-97df-856d38968e3a",
+      "component_group_name": "Group"
+    },
+    {
+      "name": "item-banner-images",
+      "display_name": "Banner item",
+      "created_at": "2020-01-03T08:12:26.420Z",
+      "updated_at": "2020-09-15T12:32:12.391Z",
+      "id": 687966,
+      "schema": {
+        "linkStyle": {
+          "type": "option",
+          "pos": 0,
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "display_name": "Link stijl",
+          "default_value": "primary"
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 1,
+          "asset_link_type": true
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "pos": 2,
+          "default_value": "",
+          "description": "Vervangt 'Lees meer'"
+        },
+        "text": {
+          "type": "textarea",
+          "display_name": "Tekst",
+          "pos": 3
+        },
+        "title": {
+          "type": "textarea",
+          "description": "",
+          "display_name": "Titel",
+          "default_value": "",
+          "pos": 4
+        },
+        "image": {
+          "type": "asset",
+          "pos": 5,
+          "display_name": "Afbeelding",
+          "required": true,
+          "default_value": "",
+          "image_crop": false,
+          "image_width": "500",
+          "image_height": "500",
+          "description": "",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "tab-1184f8b5-63b0-4d34-8430-c6a643418ad3": {
+          "type": "tab",
+          "display_name": "Afbeelding",
+          "keys": [
+            "image"
+          ],
+          "pos": 6
+        },
+        "tab-a5f7f78c-0a93-451a-8e20-9d825f7ff9db": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "title"
+          ],
+          "pos": 7
+        },
+        "tab-d458b532-baf6-44b7-8520-2ba5913db8e3": {
+          "type": "tab",
+          "display_name": "Tekst",
+          "keys": [
+            "text"
+          ],
+          "pos": 8
+        },
+        "tab-c85e3fcb-d041-4bae-bd2b-04be2f297af6": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "link",
+            "linkText",
+            "linkStyle"
+          ],
+          "pos": 9
+        }
+      },
+      "image": null,
+      "preview_field": "image",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Banner item",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-block",
+      "display_name": "Content blok",
+      "created_at": "2020-01-03T08:12:25.248Z",
+      "updated_at": "2020-09-04T07:40:39.325Z",
+      "id": 687958,
+      "schema": {
+        "image": {
+          "type": "asset",
+          "display_name": "Afbeelding",
+          "image_crop": true,
+          "image_width": "7",
+          "image_height": "4",
+          "keep_image_size": true,
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "title": {
+          "type": "text",
+          "display_name": "Titel",
+          "pos": 1
+        },
+        "text": {
+          "type": "richtext",
+          "display_name": "Tekst",
+          "pos": 2,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "underline",
+            "paragraph",
+            "redo",
+            "undo",
+            "paste"
+          ]
+        },
+        "linkStyle": {
+          "type": "option",
+          "pos": 3,
+          "display_name": "Link stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 4,
+          "show_anchor": false,
+          "asset_link_type": true,
+          "display_name": "Link"
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "description": "Vervangt 'Lees meer'",
+          "pos": 5
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Content blok",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-column-iframe",
+      "display_name": "Iframe",
+      "created_at": "2020-09-03T13:19:07.892Z",
+      "updated_at": "2020-09-03T13:19:38.691Z",
+      "id": 1083255,
+      "schema": {
+        "aspectRatio": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "display_name": "Beeldverhouding",
+          "options": [
+            {
+              "value": "1:1",
+              "name": "Vierkant (1:1)"
+            },
+            {
+              "value": "2:1",
+              "name": "Liggend (2:1)"
+            },
+            {
+              "value": "1:2",
+              "name": "Staand (1:2)"
+            },
+            {
+              "value": "3:2",
+              "name": "Liggend (3:2)"
+            },
+            {
+              "value": "2:3",
+              "name": "Staand (2:3)"
+            },
+            {
+              "value": "4:3",
+              "name": "Liggend (4:3)"
+            },
+            {
+              "value": "3:4",
+              "name": "Staand (3:4)"
+            },
+            {
+              "value": "5:4",
+              "name": "Liggend (5:4)"
+            },
+            {
+              "value": "4:5",
+              "name": "Staand (4:5)"
+            },
+            {
+              "value": "16:9",
+              "name": "Liggend (16:9)"
+            },
+            {
+              "value": "9:16",
+              "name": "Staand (9:16)"
+            },
+            {
+              "value": "21:9",
+              "name": "Liggend (21:9)"
+            },
+            {
+              "value": "9:21",
+              "name": "Staand (9:21)"
+            }
+          ],
+          "default_value": "1:1"
+        },
+        "src": {
+          "type": "text",
+          "pos": 3,
+          "display_name": "Url",
+          "description": ""
+        },
+        "tab-b74fe057-4eb1-4dec-b845-4ea42edd6305": {
+          "type": "tab",
+          "display_name": "Iframe",
+          "keys": [
+            "src",
+            "aspectRatio"
+          ],
+          "pos": 10
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Iframe",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-column-image",
+      "display_name": "Afbeelding",
+      "created_at": "2020-03-19T22:54:58.321Z",
+      "updated_at": "2020-10-08T14:16:08.380Z",
+      "id": 821415,
+      "schema": {
+        "size": {
+          "type": "option",
+          "pos": 0,
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "cover",
+              "name": "Beeldvullend"
+            },
+            {
+              "value": "contain",
+              "name": "Binnen het kader"
+            }
+          ],
+          "display_name": "Afbeelding grootte",
+          "default_value": "contain"
+        },
+        "aspectRatio": {
+          "type": "option",
+          "pos": 1,
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "1:1",
+              "name": "Vierkant (1:1)"
+            },
+            {
+              "value": "2:1",
+              "name": "Liggend (2:1)"
+            },
+            {
+              "value": "1:2",
+              "name": "Staand (1:2)"
+            },
+            {
+              "value": "3:2",
+              "name": "Liggend (3:2)"
+            },
+            {
+              "value": "2:3",
+              "name": "Staand (2:3)"
+            },
+            {
+              "value": "4:3",
+              "name": "Liggend (4:3)"
+            },
+            {
+              "value": "3:4",
+              "name": "Staand (3:4)"
+            },
+            {
+              "value": "5:4",
+              "name": "Liggend (5:4)"
+            },
+            {
+              "value": "4:5",
+              "name": "Staand (4:5)"
+            },
+            {
+              "value": "16:9",
+              "name": "Liggend (16:9)"
+            },
+            {
+              "value": "9:16",
+              "name": "Staand (9:16)"
+            },
+            {
+              "value": "21:9",
+              "name": "Liggend (21:9)"
+            },
+            {
+              "value": "9:21",
+              "name": "Staand (9:21)"
+            }
+          ],
+          "description": "Beeldverhouding alleen van toepassing als afbeelding grootte op 'Beeldvullend' staat",
+          "display_name": "Beeldverhouding",
+          "default_value": "1:1"
+        },
+        "image": {
+          "type": "asset",
+          "display_name": "Afbeelding",
+          "pos": 2,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "link": {
+          "type": "multilink",
+          "display_name": "Link",
+          "asset_link_type": true,
+          "pos": 3
+        },
+        "tab-d56c409e-5df4-49b9-b868-1fbdf380b9bd": {
+          "type": "tab",
+          "display_name": "Afbeelding",
+          "keys": [
+            "image",
+            "size",
+            "aspectRatio"
+          ],
+          "pos": 4
+        },
+        "tab-e25e5815-cecc-44cc-94ae-417478b374b6": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "link"
+          ],
+          "pos": 5
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": "<div>{{image.name || image.alt}}</div>",
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Afbeelding",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-column-text",
+      "display_name": "Tekst",
+      "created_at": "2020-03-19T23:00:30.272Z",
+      "updated_at": "2020-12-11T13:16:38.623Z",
+      "id": 821478,
+      "schema": {
+        "textColor": {
+          "type": "option",
+          "pos": 0,
+          "display_name": "Tekst kleur",
+          "default_value": "default",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "default",
+              "name": "Standaard"
+            },
+            {
+              "value": "white",
+              "name": "Wit"
+            }
+          ]
+        },
+        "linkStyle": {
+          "type": "option",
+          "pos": 1,
+          "display_name": "Link stijl",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "textAlignment": {
+          "type": "option",
+          "display_name": "Uitlijning",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            },
+            {
+              "value": "center",
+              "name": "Gecentreerd"
+            },
+            {
+              "value": "justify",
+              "name": "Uitgevuld"
+            }
+          ],
+          "description": "",
+          "default_value": "left",
+          "pos": 2
+        },
+        "link": {
+          "type": "multilink",
+          "email_link_type": false,
+          "asset_link_type": true,
+          "display_name": "Link",
+          "pos": 3
+        },
+        "linkText": {
+          "type": "text",
+          "display_name": "Link tekst",
+          "pos": 4
+        },
+        "text": {
+          "type": "richtext",
+          "display_name": "Tekst",
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "strike",
+            "underline",
+            "paragraph",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "list",
+            "olist",
+            "quote",
+            "link",
+            "paste",
+            "undo",
+            "redo",
+            "mode"
+          ],
+          "pos": 5
+        },
+        "titleTag": {
+          "type": "option",
+          "pos": 6,
+          "display_name": "Titel stijl",
+          "default_value": "h1",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "h1",
+              "name": "H1"
+            },
+            {
+              "value": "h2",
+              "name": "H2"
+            },
+            {
+              "value": "h3",
+              "name": "H3"
+            },
+            {
+              "value": "h4",
+              "name": "H4"
+            },
+            {
+              "value": "h5",
+              "name": "H5"
+            },
+            {
+              "value": "h6",
+              "name": "H6"
+            }
+          ],
+          "exclude_empty_option": true
+        },
+        "titleColor": {
+          "type": "option",
+          "pos": 7,
+          "display_name": "Titel Kleur",
+          "regex": "",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "white",
+              "name": "Wit"
+            },
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "title": {
+          "type": "text",
+          "display_name": "Titel",
+          "pos": 8
+        },
+        "borderVisible": {
+          "type": "boolean",
+          "pos": 9,
+          "display_name": "Lijn zichtbaar"
+        },
+        "borderColor": {
+          "type": "option",
+          "pos": 10,
+          "display_name": "Lijn kleur",
+          "use_uuid": true,
+          "exclude_empty_option": true,
+          "options": [
+            {
+              "value": "primary",
+              "name": "Primaire"
+            },
+            {
+              "value": "secondary",
+              "name": "Secundaire"
+            }
+          ],
+          "default_value": "primary"
+        },
+        "tab-bb695c3c-8d2c-40ed-910e-9b8115cac005": {
+          "type": "tab",
+          "display_name": "Titel",
+          "keys": [
+            "borderColor",
+            "borderVisible",
+            "title",
+            "titleColor",
+            "titleTag"
+          ],
+          "pos": 11
+        },
+        "tab-9ad1275d-781b-46df-bb9a-fe00212e4923": {
+          "type": "tab",
+          "display_name": "Tekst",
+          "keys": [
+            "text",
+            "textColor"
+          ],
+          "pos": 12
+        },
+        "tab-f7aa1411-3c52-4017-a0de-0c71527ed79e": {
+          "type": "tab",
+          "display_name": "Link",
+          "keys": [
+            "linkText",
+            "link",
+            "linkType",
+            "linkStyle"
+          ],
+          "pos": 13
+        },
+        "tab-33097787-4149-4925-a7eb-4ef2a980ead0": {
+          "type": "tab",
+          "display_name": "Opmaak",
+          "keys": [
+            "textAlignment"
+          ],
+          "pos": 14
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Tekst",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-column-video",
+      "display_name": "Video",
+      "created_at": "2020-07-16T07:10:35.531Z",
+      "updated_at": "2020-10-08T15:27:50.267Z",
+      "id": 1015143,
+      "schema": {
+        "image": {
+          "type": "asset",
+          "pos": 0,
+          "display_name": "Afbeelding",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Afbeelding die over de video heen gelegd wordt incl. play knop. Als de optie 'Automatisch afspelen' aangevikt is wordt deze niet getoond."
+        },
+        "video": {
+          "type": "asset",
+          "display_name": "Video",
+          "filetypes": [
+            "videos"
+          ],
+          "pos": 1
+        },
+        "url": {
+          "type": "text",
+          "pos": 2,
+          "display_name": "Youtube of Vimeo url"
+        },
+        "controls": {
+          "type": "boolean",
+          "display_name": "Bediening",
+          "pos": 3
+        },
+        "autoplay": {
+          "type": "boolean",
+          "display_name": "Automatisch afspelen",
+          "pos": 4
+        },
+        "loop": {
+          "type": "boolean",
+          "display_name": "Herhaald afspelen",
+          "pos": 5
+        },
+        "muted": {
+          "type": "boolean",
+          "display_name": "Geluid dempen",
+          "pos": 6
+        },
+        "tab-c0457a77-d945-43be-940d-253fe716ece1": {
+          "type": "tab",
+          "display_name": "Video",
+          "keys": [
+            "muted",
+            "loop",
+            "autoplay",
+            "controls",
+            "url",
+            "video",
+            "image"
+          ],
+          "pos": 7
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Video",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-gallery-masonry",
+      "display_name": "Afbeelding",
+      "created_at": "2020-01-03T08:12:27.292Z",
+      "updated_at": "2020-08-26T12:17:46.608Z",
+      "id": 687972,
+      "schema": {
+        "image": {
+          "type": "asset",
+          "display_name": "Afbeelding",
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": "<div>{{image.name || image.alt}}</div>",
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Afbeelding",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-nav-footer",
+      "display_name": "Menu item",
+      "created_at": "2020-03-25T23:14:29.791Z",
+      "updated_at": "2020-09-04T07:40:46.098Z",
+      "id": 832182,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "display_name": "TItel"
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 1,
+          "required": true,
+          "asset_link_type": true
+        }
+      },
+      "image": null,
+      "preview_field": "name",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Menu item",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "item-nav-main",
+      "display_name": "Menu item",
+      "created_at": "2020-01-03T08:12:26.859Z",
+      "updated_at": "2020-09-04T07:40:49.143Z",
+      "id": 687969,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "display_name": "TItel"
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 1,
+          "required": true,
+          "asset_link_type": true
+        },
+        "callToAction": {
+          "type": "boolean",
+          "pos": 2,
+          "display_name": "Call to action",
+          "description": ""
+        },
+        "children": {
+          "type": "bloks",
+          "maximum": "10",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-nav-main"
+          ],
+          "display_name": "Sub pagina's",
+          "default_value": "",
+          "pos": 3
+        }
+      },
+      "image": null,
+      "preview_field": "name",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Menu item",
+      "component_group_uuid": "b92fefae-6522-417d-a93d-1fb2ac5975d9",
+      "component_group_name": "Item"
+    },
+    {
+      "name": "page-content",
+      "display_name": "Content",
+      "created_at": "2020-03-19T10:34:38.253Z",
+      "updated_at": "2020-09-01T09:10:14.686Z",
+      "id": 820133,
+      "schema": {
+        "background": {
+          "type": "boolean",
+          "pos": 0,
+          "display_name": "Achtergrond kleur",
+          "description": ""
+        },
+        "components": {
+          "type": "bloks",
+          "pos": 1,
+          "display_name": "Componenten",
+          "required": false,
+          "restrict_components": true,
+          "component_whitelist": [],
+          "restrict_type": "groups",
+          "component_group_whitelist": [
+            "b26a2a1d-871f-44e4-9796-8ad8a8850cc0"
+          ]
+        },
+        "tab-2b456f71-9f6d-4e60-b70f-669f98341a66": {
+          "type": "tab",
+          "display_name": "Componenten",
+          "keys": [
+            "components",
+            "background"
+          ],
+          "pos": 2
+        },
+        "tab-3e8c4227-a918-4870-9670-f254e2414963": {
+          "type": "tab",
+          "display_name": "Overzicht",
+          "keys": [
+            "date",
+            "image",
+            "imageAlt",
+            "title",
+            "text",
+            "overviewImage",
+            "overviewDate",
+            "overviewTitle",
+            "overviewText"
+          ],
+          "pos": 3
+        },
+        "tab-87e23ec8-71be-4aba-bdab-d8795ce39301": {
+          "type": "tab",
+          "display_name": "Zoeken",
+          "keys": [
+            "searchTitle",
+            "searchDescription"
+          ],
+          "pos": 4
+        },
+        "tab-7ba76aa4-fd13-4365-b25f-578f15c48fb3": {
+          "type": "tab",
+          "display_name": "SEO",
+          "keys": [
+            "metaTitle",
+            "metaDescription",
+            "metaKeywords",
+            "metaRobots",
+            "metaCanonical"
+          ],
+          "pos": 5
+        },
+        "tab-1f21f894-930a-412c-8135-485d8c268a46": {
+          "type": "tab",
+          "display_name": "OpenGraph",
+          "keys": [
+            "ogSitename",
+            "ogTitle",
+            "ogDescription",
+            "ogImage"
+          ],
+          "pos": 6
+        },
+        "overviewImage": {
+          "type": "asset",
+          "pos": 7,
+          "image_crop": true,
+          "image_width": "10",
+          "keep_image_size": true,
+          "display_name": "Afbeelding",
+          "image_height": "12",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "overviewDate": {
+          "type": "datetime",
+          "pos": 8,
+          "disable_time": true,
+          "display_name": "Datum"
+        },
+        "overviewTitle": {
+          "type": "text",
+          "pos": 9,
+          "display_name": "Titel"
+        },
+        "overviewText": {
+          "type": "textarea",
+          "pos": 10,
+          "display_name": "Tekst"
+        },
+        "metaTitle": {
+          "type": "text",
+          "display_name": "Titel",
+          "pos": 11
+        },
+        "metaDescription": {
+          "type": "textarea",
+          "display_name": "Omschrijving",
+          "pos": 12
+        },
+        "metaKeywords": {
+          "type": "textarea",
+          "display_name": "Trefwoorden",
+          "max_length": "",
+          "description": "Scheiden met een komma.",
+          "pos": 13,
+          "options": []
+        },
+        "metaRobots": {
+          "type": "options",
+          "display_name": "Robots",
+          "options": [
+            {
+              "value": "noindex",
+              "name": "No index"
+            },
+            {
+              "value": "nofollow",
+              "name": "No follow"
+            },
+            {
+              "value": "noarchive",
+              "name": "No archive"
+            },
+            {
+              "value": "nosnippet",
+              "name": "No snippet"
+            },
+            {
+              "value": "notranslate",
+              "name": "No translate"
+            },
+            {
+              "value": "noimageindex",
+              "name": "No image index"
+            }
+          ],
+          "pos": 14
+        },
+        "metaCanonical": {
+          "type": "multilink",
+          "pos": 15,
+          "display_name": "Canonical"
+        },
+        "ogSitename": {
+          "type": "text",
+          "display_name": "Sitenaam",
+          "pos": 16
+        },
+        "ogTitle": {
+          "type": "text",
+          "display_name": "Titel",
+          "pos": 17
+        },
+        "ogDescription": {
+          "type": "textarea",
+          "display_name": "Omschrijving",
+          "pos": 18
+        },
+        "ogImage": {
+          "type": "image",
+          "description": "",
+          "display_name": "Afbeelding",
+          "pos": 19
+        },
+        "searchTitle": {
+          "type": "text",
+          "pos": 20,
+          "display_name": "Titel"
+        },
+        "searchDescription": {
+          "type": "textarea",
+          "pos": 21,
+          "display_name": "Omschrijving"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Content",
+      "component_group_uuid": "110b049e-7d0d-4647-9769-cafddc510990",
+      "component_group_name": "page"
+    },
+    {
+      "name": "page-settings",
+      "display_name": "Instellingen",
+      "created_at": "2020-01-03T08:12:24.955Z",
+      "updated_at": "2020-08-25T08:54:39.892Z",
+      "id": 687956,
+      "schema": {
+        "siteName": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "Website naam"
+        },
+        "favicon": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [],
+          "display_name": "Favicon"
+        },
+        "logoDesktop": {
+          "type": "asset",
+          "pos": 2,
+          "display_name": "Logo op desktop",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "logoMobile": {
+          "type": "asset",
+          "pos": 3,
+          "display_name": "Logo op mobiel (optioneel)",
+          "description": "",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "navFooter": {
+          "type": "bloks",
+          "pos": 4,
+          "display_name": "Footer navigatie",
+          "maximum": "3",
+          "restrict_components": true,
+          "component_whitelist": [
+            "group-nav-footer"
+          ]
+        },
+        "navSubFooter": {
+          "type": "bloks",
+          "display_name": "Footer sub navigatie",
+          "pos": 5,
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-nav-footer"
+          ]
+        },
+        "addressTitleFooter": {
+          "type": "text",
+          "pos": 6,
+          "display_name": "Footer adres titel"
+        },
+        "addressFooter": {
+          "type": "richtext",
+          "pos": 7,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "link",
+            "mode",
+            "redo",
+            "undo",
+            "paste",
+            "paragraph"
+          ],
+          "display_name": "Footer adres"
+        },
+        "navMainAlignment": {
+          "type": "option",
+          "pos": 8,
+          "use_uuid": true,
+          "display_name": "Uitlijning",
+          "options": [
+            {
+              "value": "left",
+              "name": "Links"
+            },
+            {
+              "value": "center",
+              "name": "Midden"
+            },
+            {
+              "value": "right",
+              "name": "Rechts"
+            }
+          ],
+          "default_value": "right"
+        },
+        "navMain": {
+          "type": "bloks",
+          "maximum": "",
+          "display_name": "Hoofdmenu",
+          "description": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "item-nav-main"
+          ],
+          "pos": 9
+        },
+        "tab-efed6025-18c0-48c1-9e2b-9b8078e44f54": {
+          "type": "tab",
+          "display_name": "Hoofdmenu",
+          "keys": [
+            "navMain",
+            "navMainAlignment"
+          ],
+          "pos": 10
+        },
+        "tab-20c62ffd-3db3-45ba-acab-c87a214d9484": {
+          "type": "tab",
+          "display_name": "Footer",
+          "keys": [
+            "navFooter",
+            "addressFooter",
+            "navSubFooter",
+            "addressTitleFooter"
+          ],
+          "pos": 11
+        },
+        "tab-ee05c368-3628-4328-9f2d-c1a1f3df277c": {
+          "type": "tab",
+          "display_name": "Social",
+          "keys": [
+            "twitter",
+            "facebook",
+            "linkedin",
+            "whatsapp",
+            "instagram"
+          ],
+          "pos": 12
+        },
+        "twitter": {
+          "type": "text",
+          "display_name": "Twitter ",
+          "pos": 13
+        },
+        "facebook": {
+          "type": "text",
+          "display_name": "Facebook",
+          "pos": 14
+        },
+        "linkedin": {
+          "type": "text",
+          "display_name": "LinkedIn",
+          "pos": 15
+        },
+        "whatsapp": {
+          "type": "text",
+          "display_name": "Whatsapp",
+          "pos": 16
+        },
+        "instagram": {
+          "type": "text",
+          "display_name": "Instagram",
+          "pos": 17
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Instellingen",
+      "component_group_uuid": "110b049e-7d0d-4647-9769-cafddc510990",
+      "component_group_name": "page"
+    },
+    {
+      "name": "page-sitemap",
+      "display_name": "Sitemap",
+      "created_at": "2020-01-03T08:12:27.435Z",
+      "updated_at": "2020-12-18T10:45:00.960Z",
+      "id": 687973,
+      "schema": {
+        "tab-e26f119a-1c71-4b92-a7f1-09a84818965d": {
+          "type": "tab",
+          "display_name": "Inhoud",
+          "keys": [
+            "title"
+          ],
+          "pos": 0
+        },
+        "tab-dd77b620-df5d-4901-bc4b-e5abe35d474a": {
+          "type": "tab",
+          "display_name": "SEO",
+          "keys": [
+            "metaTitle",
+            "metaDescription",
+            "metaKeywords",
+            "metaRobots",
+            "metaCanonical"
+          ],
+          "pos": 1
+        },
+        "metaTitle": {
+          "type": "text",
+          "display_name": "Titel"
+        },
+        "metaDescription": {
+          "type": "textarea",
+          "display_name": "Omschrijving"
+        },
+        "metaKeywords": {
+          "type": "textarea",
+          "display_name": "Trefwoorden",
+          "description": "Scheiden met een komma."
+        },
+        "metaRobots": {
+          "type": "options",
+          "options": [
+            {
+              "value": "noindex",
+              "name": "No index"
+            },
+            {
+              "value": "nofollow",
+              "name": "No follow"
+            },
+            {
+              "value": "noarchive",
+              "name": "No archive"
+            },
+            {
+              "value": "nosnippet",
+              "name": "No snippet"
+            },
+            {
+              "value": "notranslate",
+              "name": "No translate"
+            },
+            {
+              "value": "noimageindex",
+              "name": "No image index"
+            }
+          ],
+          "display_name": "Robots"
+        },
+        "metaCanonical": {
+          "type": "multilink",
+          "display_name": "Canonical"
+        },
+        "title": {
+          "type": "text",
+          "display_name": "Titel",
+          "default_value": "Sitemap"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Sitemap",
+      "component_group_uuid": "110b049e-7d0d-4647-9769-cafddc510990",
+      "component_group_name": "page"
+    }
+  ]
+}

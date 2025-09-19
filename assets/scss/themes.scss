@@ -1,0 +1,33 @@
+@import 'utils/functions';
+
+@import 'themes/umani-medical';
+
+$themes: (
+  'umani-medical': $umani-medical
+);
+
+:root {
+  @each $section, $props in $umani-medical {
+    @if (is-map($props)) {
+      @each $key, $value in $props {
+        --#{$section}-#{$key}: #{$value};
+      }
+    } @else {
+      --#{$section}: #{$props};
+    }
+  }
+}
+
+@each $name, $sections in $themes {
+  .theme-#{$name} {
+    @each $section, $props in $sections {
+      @if (is-map($props)) {
+        @each $key, $value in $props {
+          --#{$section}-#{$key}: #{$value};
+        }
+      } @else {
+        --#{$section}: #{$props};
+      }
+    }
+  }
+}

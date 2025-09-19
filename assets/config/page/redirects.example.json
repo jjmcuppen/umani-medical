@@ -1,0 +1,18 @@
+{
+  "/example/en": [
+	{
+	  "from": "/en/example-page/example",
+	  "to": "/en/example/example",
+	  "status": 301,
+	  "force": true
+	}
+  ],
+  "/example": [
+	{
+	  "from": "/example-page/example",
+	  "to": "/example/example",
+	  "status": 301,
+	  "force": true
+	}
+  ]
+}

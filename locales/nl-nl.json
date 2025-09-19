@@ -1,0 +1,53 @@
+{
+  "link": {
+    "readMore": "Lees meer"
+  },
+  "form": {
+    "send": "Versturen",
+    "recaptcha": "Deze website wordt beschermd door reCAPTCHA en het <a href=\"https://policies.google.com/privacy?hl=nl\" target=\"_blank\">privacybeleid</a> en de <a href=\"https://policies.google.com/terms?hl=nl\" target=\"_blank\">servicevoorwaarden</a> van Google zijn van toepassing.",
+    "default": {
+      "success": "Bedankt voor het invullen van het formulier. Wij nemen zo spoedig mogelijk contact met je op.",
+      "error": "Er is een onbekende fout opgetreden, probeer het nogmaals."
+    },
+    "field": {
+      "checkbox": {
+        "rules": {
+          "single": "Deze optie is verplicht",
+          "multiple": "Selecteer ten minste één optie"
+        }
+      },
+      "file": {
+        "rules": {
+          "single": "Selecteer een bestand",
+          "multiple": "Selecteer ten minste één bestand"
+        }
+      },
+      "radio": {
+        "rules": {
+          "empty": "Selecteer een optie"
+        }
+      },
+      "select": {
+        "rules": {
+          "empty": "Selecteer een optie"
+        }
+      },
+      "text": {
+        "rules": {
+          "empty": "Vul een :name in",
+          "email": "Vul een geldig e-mailadres in"
+        }
+      },
+      "textarea": {
+        "rules": {
+          "empty": "Vul een :name in"
+        }
+      }
+    }
+  },
+  "cookie": {
+    "text": "Deze website gebruikt cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren.",
+    "moreInfo": "Meer informatie",
+    "agree": "Akkoord"
+  }
+}

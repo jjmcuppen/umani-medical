@@ -1,0 +1,44 @@
+{
+  "/nl": {
+    "host": "umanimedical.com",
+    "iso": "nl-NL",
+    "hreflang": "nl-nl",
+    "site": "umani-medical",
+    "language": "Nederlands",
+    "lang": "nl",
+    "root": "",
+    "prefix": true,
+    "alternates": [
+      "de/",
+      "en/"
+    ]
+  },
+  "/de": {
+    "host": "umanimedical.com",
+    "iso": "de-DE",
+    "hreflang": "de-de",
+    "site": "umani-medical",
+    "language": "Deutsch",
+    "lang": "de",
+    "root": "",
+    "prefix": true,
+    "alternates": [
+      "nl/",
+      "en/"
+    ]
+  },
+  "/": {
+    "host": "umanimedical.com",
+    "iso": "en-GB",
+    "hreflang": "en-gb",
+    "site": "umani-medical",
+    "language": "English",
+    "lang": "en",
+    "root": "/en",
+    "prefix": false,
+    "alternates": [
+      "nl/",
+      "de/"
+    ]
+  }
+}

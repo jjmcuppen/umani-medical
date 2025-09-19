@@ -1,0 +1,14 @@
+{
+  "name": "smi-demo-template",
+  "config": {
+    "NODE_ENV": "production",
+    "HOST": "0.0.0.0",
+    "BASE_URL": "",
+    "STORYBLOK_ACCESS_TOKEN": "YxIx2i4qHtUT9em3KL7I8gtt",
+    "STORYBLOK_PERSONAL_ACCESS_TOKEN": "",
+    "STORYBLOK_SPACE_ID": "",
+    "STORYBLOK_VERSION": "draft",
+    "GOOGLE_ANALYTICS_ID": "UA-000000-1",
+    "SENTRY_DSN": ""
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "/template-1/en": {
+	"host": "localhost:8888",
+	"iso": "en-GB",
+	"hreflang": "en-gb",
+	"site": "template",
+	"lang": "en",
+	"root": "/template-1",
+	"prefix": true,
+	"alternates": [
+	  "/template-1"
+	]
+  },
+  "/template-1": {
+	"host": "localhost:8888",
+	"iso": "nl-NL",
+	"hreflang": "nl-nl",
+	"site": "template",
+	"lang": "nl",
+	"root": "/template-1/nl",
+	"prefix": false,
+	"alternates": [
+	  "/template-1/en/"
+	]
+  },
+
+  "/template-1/en": {
+	"host": "localhost:8888",
+	"iso": "en-GB",
+	"hreflang": "en-gb",
+	"site": "template",
+	"lang": "en",
+	"root": "/template-1",
+	"prefix": true,
+	"alternates": [
+	  "/template-1"
+	]
+  },
+  "/template-1/nl": {
+	"host": "localhost:8888",
+	"iso": "nl-NL",
+	"hreflang": "nl-nl",
+	"site": "template",
+	"lang": "nl",
+	"root": "/template-1",
+	"prefix": true,
+	"alternates": [
+	  "/template-1/en/"
+	]
+  },
+
+  "/": {
+	"host": "localhost:8888",
+	"iso": "nl-NL",
+	"hreflang": "nl-nl",
+	"site": "template",
+	"lang": "nl",
+	"root": "",
+	"prefix": false,
+	"alternates": []
+  }
+}

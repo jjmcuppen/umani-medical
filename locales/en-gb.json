@@ -1,0 +1,53 @@
+{
+  "link": {
+    "readMore": "Read more"
+  },
+  "form": {
+    "send": "Send",
+    "recaptcha": "This website is protected by reCAPTCHA and the <a href=\"https://policies.google.com/privacy?hl=en\" target=\"_blank\">privacy policy</a> and the <a href = \"https://policies.google.com/terms?hl=en \"target =\"_blank \">Google Terms of Service</a> apply.",
+    "default": {
+      "success": "Thank you for filling out the form. We will contact you as soon as possible.",
+      "error": "An unknown error has occurred, please try again."
+    },
+    "field": {
+      "checkbox": {
+        "rules": {
+          "single": "This option is mandatory",
+          "multiple": "Select at least one option"
+        }
+      },
+      "file": {
+        "rules": {
+          "single": "Select a file",
+          "multiple": "Select at least one file"
+        }
+      },
+      "radio": {
+        "rules": {
+          "empty": "Select an option"
+        }
+      },
+      "select": {
+        "rules": {
+          "empty": "Select an option"
+        }
+      },
+      "text": {
+        "rules": {
+          "empty": "Enter your :name",
+          "email": "Enter a correct e-mail address"
+        }
+      },
+      "textarea": {
+        "rules": {
+          "empty": "Enter your :name"
+        }
+      }
+    }
+  },
+  "cookie": {
+    "text": "This website uses cookies to analyze the use of the website and to improve the ease of use.",
+    "moreInfo": "More information",
+    "agree": "Agree"
+  }
+}
