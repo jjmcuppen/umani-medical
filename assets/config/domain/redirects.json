@@ -1,14 +1,2 @@
 {
-  "/": [
-    {
-      "from": "https://umanimedical.nl/*",
-      "to": "https://umanimedical.com/:splat",
-      "status": 301,
-      "force": true
-    }, {
-      "from": "https://www.umanimedical.nl/*",
-      "to": "https://umanimedical.com/:splat",
-      "status": 301,
-      "force": true
-    }]
 }

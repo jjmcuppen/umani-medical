@@ -93,3 +93,11 @@ sw.*
 
 # Static
 /static/robots.txt
+
+*.DS_Store
+.DS_Store
+
+# yarn
+*.yarn
+yarn.lock
+package-lock.json

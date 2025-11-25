@@ -39,6 +39,23 @@
   };
 
   export default {
+
+    beforeRouteUpdate(to, from, next) {
+      if (to.hash) {
+        const element = document.querySelector(`[data-anchor="${to.hash.replace('#', '')}"]`);
+        if (element) {
+          this.$scrollTo(element, {
+            duration: 1000,
+            easing: 'ease',
+            offset: -80
+          });
+        }
+      }
+
+      this.$store.commit('route/setTo', to.fullPath);
+      this.$store.commit('route/setFrom', from.fullPath);
+      next();
+    },
     async asyncData({ $config, app, route, store, error }) {
       // Check if we are in the editing mode
       const editMode = app.$preview || false;
@@ -113,60 +130,6 @@
     data: () => ({
       story: { content: {} }
     }),
-
-    beforeRouteUpdate(to, from, next) {
-      if (to.hash) {
-        const element = document.querySelector(`[data-anchor="${to.hash.replace('#', '')}"]`);
-        if (element) {
-          this.$scrollTo(element, {
-            duration: 1000,
-            easing: 'ease',
-            offset: -80
-          });
-        }
-      }
-
-      this.$store.commit('route/setTo', to.fullPath);
-      this.$store.commit('route/setFrom', from.fullPath);
-      next();
-    },
-
-    mounted() {
-      if (!this.$cookies.get('lang-switched')) {
-        const navigatorLang = (navigator.language || 'nl').substr(0, 2);
-        if (navigatorLang && navigatorLang !== this.$store.state.locale.current.lang) {
-          const alt = this.$store.state.locale.alternates?.find(alt => alt.lang === navigatorLang);
-          if (alt) {
-            window.location = this.$getSlug(alt.slug, true);
-          }
-        }
-      }
-
-      this.$storybridge.on([
-        'input',
-        'published',
-        'change'
-      ], event => {
-        if (event.action === 'input') {
-          if (event.story.id === this.story.id) {
-            this.story.content = event.story.content;
-          }
-        } else {
-          if (!event.slugChanged) {
-            window.location.reload();
-          }
-        }
-      });
-
-      if (this.$route.hash && this.$route.hash.startsWith('#')) {
-        const element = document.querySelector(`[data-anchor="${this.$route.hash.replace('#', '')}"]`);
-        if (element) {
-          this.$scrollTo(element, {
-            offset: -80
-          });
-        }
-      }
-    },
 
     head() {
       const baseUrl = this.$config.BASE_URL || '';
@@ -306,6 +269,43 @@
           ])
         ].filter(meta => !!meta.content)
       };
+    },
+
+    mounted() {
+      if (!this.$cookies.get('lang-switched')) {
+        const navigatorLang = (navigator.language || 'nl').substr(0, 2);
+        if (navigatorLang && navigatorLang !== this.$store.state.locale.current.lang) {
+          const alt = this.$store.state.locale.alternates?.find(alt => alt.lang === navigatorLang);
+          if (alt) {
+            window.location = this.$getSlug(alt.slug, true);
+          }
+        }
+      }
+
+      this.$storybridge.on([
+        'input',
+        'published',
+        'change'
+      ], event => {
+        if (event.action === 'input') {
+          if (event.story.id === this.story.id) {
+            this.story.content = event.story.content;
+          }
+        } else {
+          if (!event.slugChanged) {
+            window.location.reload();
+          }
+        }
+      });
+
+      if (this.$route.hash && this.$route.hash.startsWith('#')) {
+        const element = document.querySelector(`[data-anchor="${this.$route.hash.replace('#', '')}"]`);
+        if (element) {
+          this.$scrollTo(element, {
+            offset: -80
+          });
+        }
+      }
     }
   }
 </script>

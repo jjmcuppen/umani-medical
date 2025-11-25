@@ -122,7 +122,7 @@ export default {
     '@nuxtjs/dayjs',
     '@nuxtjs/google-gtag',
     '@nuxtjs/netlify-files',
-    '@nuxtjs/recaptcha',
+    // '@nuxtjs/recaptcha',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxtjs/svg',
@@ -222,11 +222,11 @@ export default {
   /*
   ** Recaptcha configuration
   */
-  recaptcha: {
-    hideBadge: true,
-    siteKey: process.env.GOOGLE_RECAPTCHA_KEY,
-    version: 3
-  },
+  // recaptcha: {
+  //   hideBadge: true,
+  //   siteKey: process.env.GOOGLE_RECAPTCHA_KEY,
+  //   version: 3
+  // },
 
   /*
    ** Robots configuration

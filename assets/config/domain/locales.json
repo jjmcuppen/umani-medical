@@ -1,6 +1,6 @@
 {
   "/nl": {
-    "host": "umanimedical.com",
+    "host": "localhost:3000",
     "iso": "nl-NL",
     "hreflang": "nl-nl",
     "site": "umani-medical",
@@ -14,7 +14,7 @@
     ]
   },
   "/de": {
-    "host": "umanimedical.com",
+    "host": "localhost:3000",
     "iso": "de-DE",
     "hreflang": "de-de",
     "site": "umani-medical",
@@ -28,7 +28,7 @@
     ]
   },
   "/": {
-    "host": "umanimedical.com",
+    "host": "localhost:3000",
     "iso": "en-GB",
     "hreflang": "en-gb",
     "site": "umani-medical",

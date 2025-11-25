@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const { config } = require('../lib/config');
 const { createMessage, sendMail } = require('../lib/mailer');
-const { verifyToken } = require('../lib/recaptcha');
+// const { verifyToken } = require('../lib/recaptcha');
 
 /**
  * Storyblok api
@@ -86,7 +86,7 @@ const findByUid = (object, uid) => {
 exports.handler = async function(event) {
   const { token, values, attachments, options } = JSON.parse(event.body);
 
-  await verifyToken(token);
+  // await verifyToken(token);
 
   const story = await getStory(options.story_id);
   if (!story) {
