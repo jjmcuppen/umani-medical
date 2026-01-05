@@ -4,5 +4,7 @@ export default function ({ isHMR, app, store }) {
     return
   }
   
-  app.i18n.locale = store.state.config.iso.toLowerCase();
+  // Set locale from config, defaulting to 'en-gb' if not available
+  const locale = store.state.config.iso ? store.state.config.iso.toLowerCase() : 'nl-nl';
+  app.i18n.locale = locale;
 }

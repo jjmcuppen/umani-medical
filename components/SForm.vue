@@ -215,40 +215,40 @@
             width = w && h ? Math.min(Math.max((w * (100 / h)), 100), 350) : width;
           }
 
-          // const {
-          //   mailValues,
-          //   mailAttachments,
-          //   netlifyValues
-          // } = await this.processValues(this.values);
+          const {
+            mailValues,
+            mailAttachments,
+            netlifyValues
+          } = await this.processValues(this.values);
 
-          // await Promise.all([
-          //   // Process form submission and save form to netlify
-          //   this.$axios.$post('/', this.encodeData({
-          //     'form-name': this._subject,
-          //     ...netlifyValues
-          //   }), {
-          //     headers: {
-          //       'Content-Type': 'multipart/form-data'
-          //     }
-          //   }),
-          //   // Process form submission and send/confirmation result mail
-          //   this.$axios.$post(`/.netlify/functions/${this._action}`, {
-          //     ...token ? {
-          //       token
-          //     } : {},
-          //     values: mailValues,
-          //     attachments: mailAttachments,
-          //     options: {
-          //       logo: {
-          //         src: logoDesktop && logoDesktop.filename || false,
-          //         width: `${width}px`
-          //       },
-          //       route: route,
-          //       story_id: this.story.uuid,
-          //       component_id: this.blok._uid
-          //     }
-          //   })
-          // ]);
+          await Promise.all([
+            // Process form submission and save form to netlify
+            this.$axios.$post('/', this.encodeData({
+              'form-name': this._subject,
+              ...netlifyValues
+            }), {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            }),
+            // Process form submission and send/confirmation result mail
+            this.$axios.$post(`/.netlify/functions/${this._action}`, {
+              ...token ? {
+                token
+              } : {},
+              values: mailValues,
+              attachments: mailAttachments,
+              options: {
+                logo: {
+                  src: logoDesktop && logoDesktop.filename || false,
+                  width: `${width}px`
+                },
+                route: route,
+                story_id: this.story.uuid,
+                component_id: this.blok._uid
+              }
+            })
+          ]);
 
           // fire event when data has been submitted
           this.$emit('submitted');
