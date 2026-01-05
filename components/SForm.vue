@@ -6,7 +6,7 @@
     <v-form
       ref="form"
       v-model="valid"
-      :name="_subject"
+      name="Contact Form"
       data-netlify="1"
       lazy-validation
       novalidate
