@@ -13,11 +13,18 @@
     getConfigByPath
   } from '@/assets/js/config';
 
-  const loadData = ({ api, cacheVersion, errorCallback, version, path }) => {
-    return api.get(`cdn/stories${path}`, {
+  const loadData = ({ api, cacheVersion, errorCallback, version, path, language }) => {
+    const params = {
       version,
       cv: cacheVersion
-    }).then(res => res.data).catch(res => {
+    };
+    
+    // Add language parameter if provided
+    if (language) {
+      params.language = language;
+    }
+    
+    return api.get(`cdn/stories${path}`, params).then(res => res.data).catch(res => {
       if (!res.response) {
         /* eslint-disable-next-line */
         console.error(res.toString());
@@ -60,25 +67,87 @@
       // Check if we are in the editing mode
       const editMode = app.$preview || false;
 
+      // Ensure config is loaded - get it from the route path
+      const configPath = editMode ? route.path : `${$config.ROOT === '/' ? '' : $config.ROOT}${route.path}`;
+      const config = getConfigByPath(configPath) || {
+        root: '/en',
+        lang: 'en',
+        prefix: false
+      };
+
+      // Construct Storyblok path based on config (matching utils/routes.js logic)
       let path = '';
-      if (!editMode && $config.MULTISITE) {
-        path = route.path === '/' ? store.state.config.root : store.state.config.root + route.path;
+      if (!editMode) {
+        const { root, lang, prefix } = config;
+        
+        // Build rootPath like utils/routes.js does
+        let rootPath = (prefix ? `${root}/${lang}` : `${root}`).replace(/^\//g, '');
+        
+        if (route.path === '/') {
+          // For homepage, use the rootPath (e.g., 'en' for English)
+          path = rootPath || 'en';
+        } else {
+          // For other paths, check if route path already starts with the locale
+          const routePath = route.path.replace(/^\//, '');
+          
+          // If route path already starts with rootPath (e.g., /nl when rootPath is 'nl'), use it directly
+          if (rootPath && routePath.startsWith(rootPath + '/')) {
+            // Route path already includes the locale prefix, use it as-is
+            path = routePath;
+          } else if (rootPath && routePath === rootPath) {
+            // Route path is exactly the locale (e.g., /nl), use rootPath
+            path = rootPath;
+          } else if (rootPath) {
+            // Route path doesn't include locale, prepend rootPath
+            path = `${rootPath}/${routePath}`;
+          } else {
+            // No rootPath, use route path as-is
+            path = routePath;
+          }
+        }
       } else {
-        path = route.path === '/' ? '/home' : route.path;
+        // In edit mode, use route path as-is
+        path = route.path === '/' ? 'home' : route.path.replace(/^\//, '');
       }
+      
+      // Ensure path ends with / for Storyblok API (folders need trailing slash)
+      if (!path.endsWith('/')) {
+        path += '/';
+      }
+      
+      // Add leading slash for API call format: cdn/stories/{path}
+      // The API call uses cdn/stories${path}, so path should start with /
+      if (!path.startsWith('/')) {
+        path = '/' + path;
+      }
+
+      // Get the language code from config (e.g., 'en', 'nl', 'de')
+      const language = config.lang || store.state.config?.lang || "nl";
+
+      // Debug logging
+      console.log('Storyblok API call:', {
+        path,
+        language,
+        configRoot: config.root,
+        routePath: route.path,
+        MULTISITE: $config.MULTISITE
+      });
 
       const data = await loadData({
         path,
         api: app.$storyapi,
         cacheVersion: store.state.cacheVersion,
         version: app.$preview ? 'draft' : store.state.version,
-        errorCallback: error
+        errorCallback: error,
+        language
       });
 
       if (data && data.story) {
         const { story } = data;
 
         const { language, lang, alternates } = store.state.config;
+
+        console.log(language, lang, alternates);
 
         const current = {
           language: language,
