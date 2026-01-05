@@ -1,9 +1,9 @@
 {
   "/nl": {
-    "host": "umanimedical.com",
+    "host": "immune-activator.com",
     "iso": "nl-NL",
     "hreflang": "nl-nl",
-    "site": "umani-medical",
+    "site": "immune-activator",
     "language": "Nederlands",
     "lang": "nl",
     "root": "",
@@ -14,10 +14,10 @@
     ]
   },
   "/de": {
-    "host": "umanimedical.com",
+    "host": "immune-activator.com",
     "iso": "de-DE",
     "hreflang": "de-de",
-    "site": "umani-medical",
+    "site": "immune-activator",
     "language": "Deutsch",
     "lang": "de",
     "root": "",
@@ -28,10 +28,10 @@
     ]
   },
   "/": {
-    "host": "umanimedical.com",
+    "host": "immune-activator.com",
     "iso": "en-GB",
     "hreflang": "en-gb",
-    "site": "umani-medical",
+    "site": "immune-activator",
     "language": "English",
     "lang": "en",
     "root": "/en",
