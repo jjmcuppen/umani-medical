@@ -10,6 +10,7 @@
       data-netlify="1"
       lazy-validation
       novalidate
+      netlify
       @submit.prevent="submit"
     >
       <v-alert
