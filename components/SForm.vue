@@ -12,7 +12,6 @@
       novalidate
       netlify
     >
-      >
       <v-alert
         v-model="alert.enable"
         :type="alert.type"
@@ -63,7 +62,7 @@
   </div>
 </template>
 
-<!-- <script>
+<script>
   import JSZip from 'jszip';
 
   import {
@@ -150,37 +149,37 @@
       };
     },
 
-    computed: {
-      _action() {
-        return this.action.startsWith('/') ? this.action.replace(/^\/+/, '') : this.action;
-      },
+    // computed: {
+    //   _action() {
+    //     return this.action.startsWith('/') ? this.action.replace(/^\/+/, '') : this.action;
+    //   },
 
-      // _recaptchaAction() {
-      //   return this.recaptchaAction || this.action.replace(/[^A-Za-z/_]+/, '');
-      // },
+    //   // _recaptchaAction() {
+    //   //   return this.recaptchaAction || this.action.replace(/[^A-Za-z/_]+/, '');
+    //   // },
 
-      _subject() {
-        const path = this.$route.path.replace(/\/$/, '');
+    //   _subject() {
+    //     const path = this.$route.path.replace(/\/$/, '');
 
-        return `${this.blok.submitSubject} - ${path}` || `Form - ${path}`;
-      },
+    //     return `${this.blok.submitSubject} - ${path}` || `Form - ${path}`;
+    //   },
 
-      _message() {
-        return this.blok.submitMessage || this.$t('form.default.success');
-      },
+    //   _message() {
+    //     return this.blok.submitMessage || this.$t('form.default.success');
+    //   },
 
-      _disabled() {
-        return !this.valid || this.submitting;
-      },
+    //   _disabled() {
+    //     return !this.valid || this.submitting;
+    //   },
 
-      _link() {
-        return this.$isLink(this.blok.submitLink) && this.$getLink(this.blok.submitLink);
-      },
+    //   _link() {
+    //     return this.$isLink(this.blok.submitLink) && this.$getLink(this.blok.submitLink);
+    //   },
 
-      _linkStyle() {
-        return this.blok.submitLinkStyle || 'blue';
-      }
-    },
+    //   _linkStyle() {
+    //     return this.blok.submitLinkStyle || 'blue';
+    //   }
+    // },
 
     // async mounted() {
       // if (this.recaptcha) {
@@ -189,176 +188,176 @@
     // },
 
     methods: {
-      async submit() {
-        this.alert.enable = false;
+      // async submit() {
+      //   this.alert.enable = false;
 
-        if (!this.$refs.form.validate()) {
-          return;
-        }
+      //   if (!this.$refs.form.validate()) {
+      //     return;
+      //   }
 
-        this.submitting = true;
+      //   this.submitting = true;
 
-        let token;
-        // try {
-        //   token = this.recaptcha && await this.$recaptcha.execute(this._recaptchaAction);
-        // }
-        // catch (e) {
-        //   throw `Recaptcha failed ${(e || '').toString()}`
-        // }
+      //   let token;
+      //   // try {
+      //   //   token = this.recaptcha && await this.$recaptcha.execute(this._recaptchaAction);
+      //   // }
+      //   // catch (e) {
+      //   //   throw `Recaptcha failed ${(e || '').toString()}`
+      //   // }
 
-        try {
-          const { route, settings: { logoDesktop }} = this.$store.state;
+      //   try {
+      //     const { route, settings: { logoDesktop }} = this.$store.state;
 
-          let width = 200;
-          if (logoDesktop && logoDesktop.filename) {
-            const [ w, h ] = getResolution(logoDesktop.filename);
+      //     let width = 200;
+      //     if (logoDesktop && logoDesktop.filename) {
+      //       const [ w, h ] = getResolution(logoDesktop.filename);
 
-            width = w && h ? Math.min(Math.max((w * (100 / h)), 100), 350) : width;
-          }
+      //       width = w && h ? Math.min(Math.max((w * (100 / h)), 100), 350) : width;
+      //     }
 
-          const {
-            mailValues,
-            mailAttachments,
-            netlifyValues
-          } = await this.processValues(this.values);
+      //     const {
+      //       mailValues,
+      //       mailAttachments,
+      //       netlifyValues
+      //     } = await this.processValues(this.values);
 
-          await Promise.all([
-            // Process form submission and save form to netlify
-            this.$axios.$post('/', this.encodeData({
-              'form-name': this._subject,
-              ...netlifyValues
-            }), {
-              headers: {
-                'Content-Type': 'multipart/form-data'
-              }
-            }),
-            // Process form submission and send/confirmation result mail
-            this.$axios.$post(`/.netlify/functions/${this._action}`, {
-              ...token ? {
-                token
-              } : {},
-              values: mailValues,
-              attachments: mailAttachments,
-              options: {
-                logo: {
-                  src: logoDesktop && logoDesktop.filename || false,
-                  width: `${width}px`
-                },
-                route: route,
-                story_id: this.story.uuid,
-                component_id: this.blok._uid
-              }
-            })
-          ]);
+      //     await Promise.all([
+      //       // Process form submission and save form to netlify
+      //       this.$axios.$post('/', this.encodeData({
+      //         'form-name': this._subject,
+      //         ...netlifyValues
+      //       }), {
+      //         headers: {
+      //           'Content-Type': 'multipart/form-data'
+      //         }
+      //       }),
+      //       // Process form submission and send/confirmation result mail
+      //       this.$axios.$post(`/.netlify/functions/${this._action}`, {
+      //         ...token ? {
+      //           token
+      //         } : {},
+      //         values: mailValues,
+      //         attachments: mailAttachments,
+      //         options: {
+      //           logo: {
+      //             src: logoDesktop && logoDesktop.filename || false,
+      //             width: `${width}px`
+      //           },
+      //           route: route,
+      //           story_id: this.story.uuid,
+      //           component_id: this.blok._uid
+      //         }
+      //       })
+      //     ]);
 
-          // fire event when data has been submitted
-          this.$emit('submitted');
+      //     // fire event when data has been submitted
+      //     this.$emit('submitted');
 
-          if (this._link) {
-            if (this._link.includes('://')) {
-              return location.href = this._link;
-            }
+      //     if (this._link) {
+      //       if (this._link.includes('://')) {
+      //         return location.href = this._link;
+      //       }
 
-            return await this.$router.push(this._link);
-          }
+      //       return await this.$router.push(this._link);
+      //     }
 
-          this.$refs.form.reset();
+      //     this.$refs.form.reset();
 
-          this.$emit('input', { ...this.values });
+      //     this.$emit('input', { ...this.values });
 
-          this.alert.type = 'success';
-          this.alert.message = this._message;
+      //     this.alert.type = 'success';
+      //     this.alert.message = this._message;
 
-        } catch (error) {
-          // eslint-disable-next-line
-          console.error(!!error && error.toString());
+      //   } catch (error) {
+      //     // eslint-disable-next-line
+      //     console.error(!!error && error.toString());
 
-          this.alert.type = 'error';
-          this.alert.message = this.$t('form.default.error');
-        }
+      //     this.alert.type = 'error';
+      //     this.alert.message = this.$t('form.default.error');
+      //   }
 
-        this.alert.enable = true;
-        this.submitting = false;
+      //   this.alert.enable = true;
+      //   this.submitting = false;
 
-        await this.$vuetify.goTo(this.$refs.form, {
-          offset: 110
-        });
-      },
+      //   await this.$vuetify.goTo(this.$refs.form, {
+      //     offset: 110
+      //   });
+      // },
 
-      async processValues(values) {
-        let mailValues = {};
-        let mailAttachments = [];
+      // async processValues(values) {
+      //   let mailValues = {};
+      //   let mailAttachments = [];
 
-        let netlifyValues = {};
+      //   let netlifyValues = {};
 
-        for (let key of Object.keys(values)) {
-          let value = values[key];
+      //   for (let key of Object.keys(values)) {
+      //     let value = values[key];
 
-          if (value instanceof Array && value[0] instanceof File) {
-            const zip = new JSZip();
+      //     if (value instanceof Array && value[0] instanceof File) {
+      //       const zip = new JSZip();
 
-            for (let file of value) {
-              zip.file(file.name, file);
-            }
+      //       for (let file of value) {
+      //         zip.file(file.name, file);
+      //       }
 
-            const zipFile = await zip.generateAsync({
-              type : 'blob'
-            }).then(blob => {
-              return new File([blob], `${key}.zip`, {
-                lastModified: Date.now(),
-                type: 'application/zip'
-              });
-            });
+      //       const zipFile = await zip.generateAsync({
+      //         type : 'blob'
+      //       }).then(blob => {
+      //         return new File([blob], `${key}.zip`, {
+      //           lastModified: Date.now(),
+      //           type: 'application/zip'
+      //         });
+      //       });
 
-            mailAttachments.push({
-              name: `${key}.zip`,
-              data: await this.getBase64(zipFile)
-            });
+      //       mailAttachments.push({
+      //         name: `${key}.zip`,
+      //         data: await this.getBase64(zipFile)
+      //       });
 
-            mailValues[key] = value.map(file => file.name);
+      //       mailValues[key] = value.map(file => file.name);
 
-            netlifyValues[key] = zipFile;
-          } else {
-            mailValues[key] = netlifyValues[key] = value;
-          }
-        }
+      //       netlifyValues[key] = zipFile;
+      //     } else {
+      //       mailValues[key] = netlifyValues[key] = value;
+      //     }
+      //   }
 
-        return {
-          mailValues,
-          mailAttachments,
-          netlifyValues
-        }
-      },
+      //   return {
+      //     mailValues,
+      //     mailAttachments,
+      //     netlifyValues
+      //   }
+      // },
 
-      encodeData(values) {
-        const formData = new FormData();
+      // encodeData(values) {
+      //   const formData = new FormData();
 
-        Object.keys(values).forEach((key) => formData.append(key, values[key]));
+      //   Object.keys(values).forEach((key) => formData.append(key, values[key]));
 
-        return formData;
-      },
+      //   return formData;
+      // },
 
-      async getBase64(file) {
-        return new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = () => {
-            let encoded = reader.result.toString().replace(/^data:(.*,)?/, '');
-            if ((encoded.length % 4) > 0) {
-              encoded += '='.repeat(4 - (encoded.length % 4));
-            }
-            resolve(encoded);
-          };
-          reader.onerror = error => reject(error);
-        });
-      },
+      // async getBase64(file) {
+      //   return new Promise((resolve, reject) => {
+      //     const reader = new FileReader();
+      //     reader.readAsDataURL(file);
+      //     reader.onload = () => {
+      //       let encoded = reader.result.toString().replace(/^data:(.*,)?/, '');
+      //       if ((encoded.length % 4) > 0) {
+      //         encoded += '='.repeat(4 - (encoded.length % 4));
+      //       }
+      //       resolve(encoded);
+      //     };
+      //     reader.onerror = error => reject(error);
+      //   });
+      // },
 
       _component(field) {
         return `s-${field.component}`
       }
     }
   }
-</script> -->
+</script>
 
 <style lang="scss" scoped>
   @import '~assets/scss/variables.scss';
