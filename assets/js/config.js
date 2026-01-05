@@ -6,7 +6,9 @@ import locales  from '../config/domain/locales.json';
  * @returns {{}}
  */
 export const getConfigByPath = (path) => {
-  const key = Object.keys(locales).find(root => path.startsWith(root));
+  // Sort keys by length (longest first) to match more specific paths first
+  const keys = Object.keys(locales).sort((a, b) => b.length - a.length);
+  const key = keys.find(root => path.startsWith(root));
   
   return locales[key];
 };
