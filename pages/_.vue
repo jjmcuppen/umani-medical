@@ -124,15 +124,6 @@
       // Get the language code from config (e.g., 'en', 'nl', 'de')
       const language = config.lang || store.state.config?.lang || "nl";
 
-      // Debug logging
-      console.log('Storyblok API call:', {
-        path,
-        language,
-        configRoot: config.root,
-        routePath: route.path,
-        MULTISITE: $config.MULTISITE
-      });
-
       const data = await loadData({
         path,
         api: app.$storyapi,
@@ -146,8 +137,6 @@
         const { story } = data;
 
         const { language, lang, alternates } = store.state.config;
-
-        console.log(language, lang, alternates);
 
         const current = {
           language: language,
