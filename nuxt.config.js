@@ -28,7 +28,7 @@ export default {
   ** Build configuration
   */
   build: {
-    transpile: [ /^vuetify/ ],
+    transpile: [ /^vuetify/, 'graphql' ],
     extractCSS: isProduction,
     hardSource: process.env.HARDSOURCE,
     /*
@@ -39,6 +39,13 @@ export default {
         ...config.plugins,
         new webpack.IgnorePlugin(/unicode\/category\/So/, /node_modules/)
       ];
+
+      // ensure webpack can parse .mjs files from node_modules
+      config.module.rules.push({
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      });
 
       if (isClient && isDev) {
         config.devtool = 'source-map';
