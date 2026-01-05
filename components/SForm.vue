@@ -11,8 +11,8 @@
       lazy-validation
       novalidate
       netlify
-      @submit.prevent="submit"
     >
+      >
       <v-alert
         v-model="alert.enable"
         :type="alert.type"
@@ -63,7 +63,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
   import JSZip from 'jszip';
 
   import {
@@ -358,7 +358,7 @@
       }
     }
   }
-</script>
+</script> -->
 
 <style lang="scss" scoped>
   @import '~assets/scss/variables.scss';
